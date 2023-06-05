@@ -18,7 +18,6 @@ This repository includes files with plain SQL that can be used to recreate a dat
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -69,19 +68,11 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
+> Key features of the application.
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [Live Demo Link](<replace-with-your-deployment-URL>)
+- **Has an animals table schema**
+- **Has animals table data**
+- **A couple of animals search queries**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -93,54 +84,31 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need:
-
-```sh
- gem install rails
-```
+In order to run this project you need to install [PostgreSQL](https://www.postgresql.org/download/) in your local machine.
 
 ### Setup
 
-Clone this repository to your desired folder:
+Create a database using SQL Shell (psql):
 
 ```sh
-  cd my-folder
-  git clone git@github.com:jlvFlores/Vet-clinic-database.git
+  CREATE DATABASE vet_clinic;
 ```
 
-### Install
-
-Install this project with:
+You can check if it has been created by running the following command:
 
 ```sh
-  cd my-project
-  gem install
+  \list
 ```
 
 ### Usage
 
-To run the project, execute the following command:
+Access your database using the following command:
 
 ```sh
-  rails server
+  \c vet_clinic
 ```
 
-### Run tests
-
-To run tests, run the following command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
-
-### Deployment
-
-You can deploy this project using:
-
-
-```sh
-
-```
+And finally you can implement the commands located in the sql files of this repository to create and fill your table with information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -162,11 +130,8 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
-
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **Add more tables**
+- [ ] **Add PRIMARY KEYS to the tables**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
