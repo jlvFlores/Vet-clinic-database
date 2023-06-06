@@ -73,7 +73,7 @@ INSERT INTO animals (
 ),
 (
   'Boarmon',
-  '2005-06-12'::date,
+  '2005-06-07'::date,
   20.4,
   TRUE,
   7
