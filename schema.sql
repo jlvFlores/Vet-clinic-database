@@ -84,3 +84,13 @@ CREATE TABLE visits(
 );
 
 ALTER TABLE owners ALTER COLUMN age DROP NOT NULL;
+
+--POSSIBLE SOLUTIONS FOR OPTIMIZING EXECITION TIME
+CREATE INDEX visits_by_animal_id_asc ON visits(animal_id ASC);
+CREATE INDEX visits_by_vet_id_asc ON visits(vet_id ASC);
+CREATE INDEX owners_email_asc ON owners(email ASC);
+
+CREATE INDEX visits_where_vet_id_1 ON visits(vet_id) WHERE vet_id = 1;
+CREATE INDEX visits_where_vet_id_2 ON visits(vet_id) WHERE vet_id = 2;
+CREATE INDEX visits_where_vet_id_3 ON visits(vet_id) WHERE vet_id = 3;
+CREATE INDEX visits_where_vet_id_4 ON visits(vet_id) WHERE vet_id = 4;
