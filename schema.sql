@@ -94,3 +94,17 @@ CREATE INDEX visits_where_vet_id_1 ON visits(vet_id) WHERE vet_id = 1;
 CREATE INDEX visits_where_vet_id_2 ON visits(vet_id) WHERE vet_id = 2;
 CREATE INDEX visits_where_vet_id_3 ON visits(vet_id) WHERE vet_id = 3;
 CREATE INDEX visits_where_vet_id_4 ON visits(vet_id) WHERE vet_id = 4;
+
+--PARTITION SOLUTION FOR 2ND QUERY
+CREATE TABLE visits_partitioned (
+  id INT GENERATED ALWAYS AS IDENTITY,
+  animal_id INT,
+  vet_id INT,
+  date_of_visit DATE,
+  PRIMARY KEY(id, vet_id)
+) PARTITION BY RANGE (vet_id);
+
+CREATE TABLE visits_partition_1 PARTITION OF visits_partitioned FOR VALUES FROM (1) TO (2);
+CREATE TABLE visits_partition_2 PARTITION OF visits_partitioned FOR VALUES FROM (2) TO (3);
+CREATE TABLE visits_partition_3 PARTITION OF visits_partitioned FOR VALUES FROM (3) TO (4);
+CREATE TABLE visits_partition_4 PARTITION OF visits_partitioned FOR VALUES FROM (4) TO (MAXVALUE);
