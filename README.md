@@ -110,6 +110,13 @@ And finally you can implement the commands located in the sql files of this repo
 - Twitter: [@JoseVaz44312762](https://twitter.com/JoseVaz44312762)
 - LinkedIn: [Jose (Luis) Vazquez](https://www.linkedin.com/in/jose-luis-vazquez/)
 
+👤 **Author2**
+
+- GitHub: [@Ellyboi](https://github.com/Ellyboi)
+- Twitter: [@ElijahVitoesi](https://twitter.com/elijahvitoesi)
+- LinkedIn: [Vitoesi Elijah](https://www.linkedin.com/in/vitoesi-elijah-61961611a/)
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
