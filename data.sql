@@ -78,7 +78,7 @@ INSERT INTO visits (animal_id, vet_id, date_of_visit) SELECT * FROM (SELECT id F
 INSERT INTO owners (full_name, email) SELECT 'Owner ' || generate_series(1,2500000), 'owner_' || generate_series(1,2500000) || '@mail.com';
 
 --PARTITION SOLUTION FOR 2ND QUERY
--- Filling in tables
+-- Filling in tables with the neccesary data
 INSERT INTO visits_partition_1 (id, animal_id, vet_id, date_of_visit) SELECT id, animal_id, vet_id, date_of_visit FROM visits WHERE vet_id = 1;
 INSERT INTO visits_partition_2 (id, animal_id, vet_id, date_of_visit) SELECT id, animal_id, vet_id, date_of_visit FROM visits WHERE vet_id = 2;
 INSERT INTO visits_partition_3 (id, animal_id, vet_id, date_of_visit) SELECT id, animal_id, vet_id, date_of_visit FROM visits WHERE vet_id = 3;
