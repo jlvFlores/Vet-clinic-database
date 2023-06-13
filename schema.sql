@@ -104,6 +104,7 @@ CREATE TABLE visits_partitioned (
   PRIMARY KEY(id, vet_id)
 ) PARTITION BY RANGE (vet_id);
 
+-- CREATE PARTITION TABLE
 CREATE TABLE visits_partition_1 PARTITION OF visits_partitioned FOR VALUES FROM (1) TO (2);
 CREATE TABLE visits_partition_2 PARTITION OF visits_partitioned FOR VALUES FROM (2) TO (3);
 CREATE TABLE visits_partition_3 PARTITION OF visits_partitioned FOR VALUES FROM (3) TO (4);
